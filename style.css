@@ -1,0 +1,125 @@
+body{
+
+    border:0;
+    margin:0;
+    box-sizing: border-box;
+}
+div{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  margin:15% auto;
+  position:relative;
+  width:250px;
+  height:250px;
+  background:-webkit-linear-gradient(-45deg ,#ca22eb 20% , #149cc5 100%);
+  color:#fff;
+  font-weight: lighter;
+  font-size: 2rem;
+  font-family: 'monospace';
+  transition: 1s box-shadow;
+    border-radius:75px;
+
+
+}
+div:hover{
+    box-shadow:0 10px 30px 0px rgb(0, 0, 0,0.2);
+}
+div:hover:before,div:hover:after{
+
+    display:block;
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:rgba(241, 15, 203, 0.966);
+    border-radius:75px;
+    z-index:-1;
+    animation:2s clockwise infinite;
+}
+div:hover:after{
+    background:#062d75;
+    animation:1s counterclockwise infinite;
+}
+@keyframes clockwise{
+    0%{
+        top:-7px;
+        left:0px;
+
+    }
+    12%{
+        top:-3px;
+        left:3px;
+    }
+    25%{
+        top:0;
+        left:3px;
+    }
+    37%{
+        top:3px;
+        left:3px;
+
+    }
+    50%{
+        top:7px;
+        left:3px;
+    }
+    62%{
+        top:3px;
+        left:-3px;
+    }
+    75%{
+        top:0;
+        left:-7px;
+
+    }
+    87%{
+   top:-3px;
+   left:-3px;
+    }
+    100%{
+        top:-7px;
+        left:0;
+    }
+}
+@keyframes counterclockwise{
+    0%{
+        top:-5px;
+        right:0px;
+
+    }
+    12%{
+        top:-2px;
+        right:2px;
+    }
+    25%{
+        top:0;
+        right:2px;
+    }
+    37%{
+        top:2px;
+        right:2px;
+
+    }
+    50%{
+        top:5px;
+        right:2px;
+    }
+    62%{
+        top:2px;
+        right:-2px;
+    }
+    75%{
+        top:0;
+        right:-5px;
+
+    }
+    87%{
+   top:-2px;
+   right:-2px;
+    }
+    100%{
+        top:-5px;
+        right:0;
+    }
+}
